@@ -40,7 +40,7 @@
 
             <div class="info-user">
 
-                <p>Sede centro</p>
+                <p>Sede Taiwán</p>
                 <div class="user-rol">
                     <img src="../src/img/profile.png" alt="user profile foto">
                     <p>Camilo Lyn</p>
@@ -58,10 +58,9 @@
                     </div>
 
                     <ul class="option-list">
-                        <li><a href=""><span class="material-symbols-outlined">person</span> Perfil</a></li>
-                        <li><a href=""><span class="material-symbols-outlined">
-                            location_on</span> Sede</a></li>
-                        <li><a href="../index.html"><span class="material-symbols-outlined">logout</span> Salir</a></li>
+                        <li><a id="editUser"><span class="material-symbols-outlined">person</span>Perfil</a></li>
+                        <li><a id="changeLocation"><span class="material-symbols-outlined">location_on</span>Sede</a></li>
+                        <li><a href="../index.html"><span class="material-symbols-outlined">logout</span>Salir</a></li>
                     </ul>
 
                 </div>
@@ -143,6 +142,49 @@
             <p>Copyright  © 2024 Goethe Dev. All Rights Reserved</p>
         </footer>
     </main>
+
+    <!-- Popup sede -->
+    <div class="popup" id="popup">
+        <div class="overlay"></div>
+        <div class="popup-box center shadow">
+            <h2>Cambiar sede</h2>
+            <div class="popup-content">
+                <select class="lista-desplegable">
+                    <option value="0">Seleccionar</option>
+                    <option value="1">Sede Taiwán</option>
+                    <option value="2">Sede Norte</option>
+                    <option value="3">Sede Urbanización el Parque</option>
+                  </select>    
+            </div>
+            
+            <div class="popup-controls">
+                <button class="close-btn">Cancelar</button>
+                <button class="submit-btn">Ok</button>
+            </div>
+        </div>
+     </div>
+
+     <!-- Popup USER -->
+     <div class="popup" id="popup-user">
+        <div class="overlay"></div>
+        <div class="popup-box center shadow">
+            <h2>Editar perfil</h2>
+            <div class="popup-content">
+                <div class="change-foto">
+                    <img src="../src/img/profile.png" alt="">
+                    <span class="material-symbols-outlined">edit</span>
+                </div> 
+                <div>
+                    
+                </div>
+            </div>
+            
+            <div class="popup-controls">
+                <button class="close-btn">Cancelar</button>
+                <button class="submit-btn">Ok</button>
+            </div>
+        </div>
+     </div>
 
     <script src="./main.js"></script>
 </body>

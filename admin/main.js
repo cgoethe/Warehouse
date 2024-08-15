@@ -42,3 +42,56 @@ closeSidebar.addEventListener("click", () => {
 
 
 
+const changeLocationBtn = document.querySelector("#changeLocation");
+//Modal de cambiar sede
+changeLocationBtn.addEventListener("click",() => {
+    let popupNode = document.querySelector("#popup");
+    let overlay = popupNode.querySelector(".overlay");
+    let closeBtn = popupNode.querySelector(".close-btn");
+    let submitBtn = popupNode.querySelector(".submit-btn");
+
+    function openPopup(){
+        popupNode.classList.add("active")
+    }
+
+    
+    function closePopup(){
+        popupNode.classList.remove("active")
+    }
+
+    //Events to close popup when it's opened
+    overlay.addEventListener("click", closePopup);
+    closeBtn.addEventListener("click", closePopup);
+    submitBtn.addEventListener("click", closePopup);
+
+    return openPopup();
+})
+
+
+//Modal de editar usuario
+const editUserBtn = document.querySelector("#editUser");
+editUserBtn.addEventListener("click",() => {
+    let popupNode = document.querySelector("#popup-user");
+    let overlay = popupNode.querySelector(".overlay");
+    let closeBtn = popupNode.querySelector(".close-btn");
+    let submitBtn = popupNode.querySelector(".submit-btn");
+
+    function openPopup(){
+        popupNode.classList.add("active")
+    }
+
+    
+    function closePopup(){
+        popupNode.classList.remove("active")
+    }
+
+    //Events to close popup when it's opened
+    overlay.addEventListener("click", closePopup);
+    closeBtn.addEventListener("click", closePopup);
+    submitBtn.addEventListener("click", closePopup);
+
+    return openPopup();
+})
+
+
+
