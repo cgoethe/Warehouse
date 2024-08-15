@@ -114,6 +114,7 @@ body{
     display: grid;
     grid-template-rows: auto 1fr;
     transition: all 0.2s ease;
+    overflow-y: auto;
 }
 
 .sidebar .close{
