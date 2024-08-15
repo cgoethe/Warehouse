@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+            color: #292929;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        body img{
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .sign-in{
+            height: 100vh;
+            max-width: 700px;
+            box-sizing: border-box;
+            padding: 80px 60px;
+            display: grid;
+            align-content: center;
+            gap: 12px;
+            margin: auto;
+        }
+
+        .sign-in p{
+            margin-bottom: 32px;
+        }
+
+        .input-text{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-text input{
+            box-sizing: border-box;
+            background: white;
+            padding: 12px 12px;
+            border-radius: 8px;
+            border: 1px solid #E5E5E5;
+            font-size: 16px;
+
+        }
+
+        .input-text input:focus{
+            border: 1px solid #D0D0D0;
+            outline: none;
+        }
+
+        .loggin-button{
+            display: block;
+            cursor: pointer;
+            border: none;
+            border-radius: 40px;
+            text-decoration: none;
+            background: #7da3e1;
+            width: 300px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            color: white;
+            place-self: center;
+            margin-top: 40px;
+        }
+
+        .loggin-button:hover{
+            background: #5584CE;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="sign-in">
+        <h1>Inicia sesión</h1>
+
+        <p>Sabías que La mala gestión de inventario es una de las principales razones por las que las empresas fracasan. El control de inventario es esencialmente un acto de equilibrio entre tener muy poco o demasiado.</p>
+
+        <div class="input-text">
+            <label for="">Usuario</label>
+            <input type="text" id="username">
+        </div>
+
+        <div class="input-text">
+            <label for="">Contraseña</label>
+            <input type="password" id="password">
+        </div>
+
+        <a class="loggin-button" href="#" id="loggin-button">Ingresar</a>
+
+        <script src="./start.js"></script>
+
+
+    </div>
+    <img src="./src/img/signin.jpg" alt="">
+
+    
+</body>
+</html>
