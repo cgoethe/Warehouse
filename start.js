@@ -8,7 +8,7 @@ enterButton.addEventListener("click", () => {
 
     if(password.value !== ""){
         if((user.value === "admin" && password.value === "admin")){
-            window.location.href = "./admin/index.html"
+            window.location.href = "./admin/resumen.html"
         }else if((user.value === "vendedor" && password.value === "vendedor")){
             window.location.href = "./seller/index.html"
         }else{

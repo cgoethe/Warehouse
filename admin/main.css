@@ -508,11 +508,6 @@ header .menu-icon{
     top: 72px;
     position: relative;
     min-height: calc(100% - 72px*2);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
-    grid-template-rows: repeat(auto-fit,121px);
-    gap: 24px;
-
 }
 
 .mainContent footer{
