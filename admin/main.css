@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cbcbcb; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999999; 
+
+  }
+
+
+
+:root{
+    --gray-bg: #F9F9F9;
+    --gray-font: #515151;
+    --gray-border: #D0D0D0;
+    --gray-hover: rgb(237, 237, 237);
+    --theme-hover: #f2f7ff;
+    --theme-color: #5584CE;
+    --white: white;
+    --black: #121212;
+}
+
+/* ------------------------------------------ */
+.card{
+    background: var(--white);
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 16px;
+    overflow-y: auto;
+    
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.12);
+}
+
+
+.col-1{
+    grid-column: span 1;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.col-3{
+    grid-column: span 3;
+}
+
+.col-4{
+    grid-column: span 4;
+}
+
+.row-1{
+    grid-row: span 1;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+
+.row-3{
+    grid-row: span 3;
+}
+
+.row-4{
+    grid-row: span 4;
+}
+
+
+/* ------------------------------------------ */
+
+body{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 100%;
+    height: 100vh;
+    background: var(--gray-bg);
+    color: var(--black);
+    user-select: none;
+}
+/* ------------------------------------------ */
+
+.sidebar{
+    height: 100vh;
+    width: 300px;
+    background: var(--white);
+    position: fixed;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    transition: all 0.2s ease;
+}
+
+.sidebar .close{
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    scale: 1.5;
+    cursor: pointer;
+}
+
+.company-info{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.company-info img{
+    width: 100px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.sidebar-options{
+
+    overflow-y: auto;
+}
+
+.sidebar-options ul{
+    list-style: none;
+}
+
+.sidebar-options  li a{
+    list-style: none;
+    width: 100%;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    color: var(--black);
+}
+
+.sidebar-options a:hover{
+    background: var(--gray-hover);
+}
+
+.sidebar-options .option-selected{
+    background: var(--theme-hover);
+    border-left: 8px solid var(--theme-color);
+    color: var(--theme-color);
+    font-weight: bold;
+}
+
+.sidebar-options .option-selected:hover{
+    background: var(--theme-hover);
+}
+
+
+
+
+/* ------------------------------------------ */
+
+
+
+.mainContent{
+    height: 100%;
+    width: calc(100% - 300px);
+    right: 0;
+    position: absolute;
+
+}
+
+.mainContent header{
+    z-index: 1;
+    height: 72px;
+    width: calc(100% - 300px);
+    box-sizing: border-box;
+    padding: 0 24px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--gray-bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-hover);
+    
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+}
+
+header .menu-icon{
+    
+    display: none;
+    cursor: pointer;
+    scale: 1.8;
+    margin-right: 24px;
+}
+
+.info-user{
+    display: flex;
+    align-items: center;
+
+    > p {
+        font-size: 14px;
+    }
+}
+
+.user-rol{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 43px;
+    align-items: center;
+    width: auto;
+    min-width: 200px;
+    justify-content: center;
+    column-gap: 8px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-left: 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-hover) ;
+
+}
+
+.user-rol:hover{
+    background: var(--gray-hover);
+}
+
+.user-rol img{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: 32px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+}
+
+.user-rol p:nth-child(2){
+    align-self: self-end;
+    line-height: 10px;
+}
+
+.user-rol p:nth-child(3){
+    color: var(--gray-font);
+    font-size: 12px;
+    line-height: 0px;
+
+}
+
+
+.user-rol span{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.user-tooltip{
+    display: none;
+    position: fixed;
+    width: auto;
+    min-width: 232px;
+    height: auto;
+    top: 72px;
+    right: 24px;
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+
+    > div {
+        display: none;
+    }
+}
+
+.option-list{
+    list-style: none;
+    margin: 16px 0;
+}
+
+.option-list li a{
+
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+    display: grid;
+    text-decoration: none;
+    color: var(--black);
+    box-sizing: border-box;
+    padding: 8px 12px;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.option-list a:hover{
+    background: var(--gray-hover);
+}
+/* ---------------------------------------- */
+
+.mainContent .container{
+    display: grid;
+    box-sizing: border-box;
+    padding: 24px;
+    top: 72px;
+    position: relative;
+    min-height: calc(100% - 72px*2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+    grid-template-rows: repeat(auto-fit,121px);
+    gap: 24px;
+
+}
+
+.mainContent footer{
+    height: 72px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 0 24px;
+    position: relative;
+    transform: translate(0,72px);
+
+}
+
+
+@media (max-width: 1300px){
+
+
+    .mainContent{
+        width: calc(100% - 80px);
+    }
+
+    .mainContent header{
+        width: calc(100% - 80px);
+    }
+
+    
+    .sidebar{
+        height: 100vh;
+        width: 80px;
+        background: var(--white);
+        display: grid;
+        grid-template-rows: 185px 1fr;
+        padding: 0;
+    }
+
+    .company-info{
+        padding: 0;
+        display: grid;
+        align-items: flex-start;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .company-info h3{
+        display: none;
+    }
+
+    .company-info img{
+        width: 48px;
+        margin: 0;
+    }
+
+    .sidebar-options ul{
+        list-style: none;
+    }
+
+    .sidebar-options  li a{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .sidebar-options  li a p{
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 861px){
+    .sidebar{
+        display: none;
+    }
+
+    
+    .mainContent{
+        width: 100%;
+    }
+
+    .mainContent header{
+        width: 100%;
+    }
+
+    .info-user > p{
+        display: none;
+    }
+
+    .user-rol{
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
+        min-width: auto;
+        gap: 4px;
+    } 
+
+    .user-rol p{
+        display: none;
+    }
+
+    .user-tooltip > div{
+        display: block;
+        box-sizing: border-box;
+        padding: 20px 12px 0px 16px;
+        line-height: 20px;
+    }
+
+    header .menu-icon{
+        display: block;
+    }
+
+    .sidebar{
+        display: none;
+        height: 100vh;
+        width: 300px;
+    }
+
+    .sidebar .close{
+        display: block;
+    }
+
+    .company-info{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+
+    .company-info h3{
+        display: inline;
+    }
+
+
+    .company-info img{
+        width: 100px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-bottom: 8px;
+    }
+
+    .sidebar-options  li a{
+        list-style: none;
+        width: 100%;
+        background: var(--white);
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 20px 16px;
+        color: var(--black);
+        text-align: start;
+    }
+
+    .sidebar-options  li a p{
+        display: inline;
+    }
+
+    
+
+}
