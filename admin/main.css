@@ -667,6 +667,10 @@ header .menu-icon{
         display: inline;
     }
 
+    .popup{
+        display: none;
+    }
+
     
 
 }
