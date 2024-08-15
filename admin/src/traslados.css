@@ -1,0 +1,10 @@
+.container-traslados{
+    display: grid;
+    place-items: center;
+}
+
+.container-traslados img{
+    width: 80%;
+    max-width: 450px;
+    border-radius: 20px;
+}
