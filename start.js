@@ -7,7 +7,13 @@ const enterButton = document.getElementById("loggin-button")
 enterButton.addEventListener("click", () => {
 
     if(password.value !== ""){
-        user.value === "admin" ? window.location.href = "./admin/index.html" : window.location.href = "./seller/index.html";
+        if((user.value === "admin" && password.value === "admin")){
+            window.location.href = "./admin/index.html"
+        }else if((user.value === "vendedor" && password.value === "vendedor")){
+            window.location.href = "./seller/index.html"
+        }else{
+            alert("Usuario o contraseña incorrectos")
+        }
     }else{
         alert("Ingresa una contraseña")
     }
