@@ -1,3 +1,10 @@
-.container-resumen{
-    
+.container-settings{
+    display: grid;
+    place-items: center;
+}
+
+.container-settings img{
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
 }

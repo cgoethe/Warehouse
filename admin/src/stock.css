@@ -1,3 +1,10 @@
-.container-resumen{
-    
+.container-stock{
+    display: grid;
+    place-items: center;
+}
+
+.container-stock img{
+    width: 80%;
+    max-width: 450px;
+    border-radius: 20px;
 }
