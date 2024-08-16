@@ -108,4 +108,55 @@ editUserBtn.addEventListener("click",() => {
 })
 
 
+//Desplegar lista de opciones en celda
+document.addEventListener("click", function(event) {
+    // Ocultar cualquier popup abierto
+    document.querySelectorAll(".options-popup").forEach(function(popup) {
+      popup.style.display = "none";
+    });
+
+    // event.target se refiere al elemento en el que el usuario hizo clic.
+    // Mostrar el popup si se hizo click en los 3 puntos
+    if (event.target.classList.contains("dots")) {
+        
+    //event.target.nextElementSibling selecciona el siguiente elemento hermano (sibling) del elemento clicado,
+      event.target.nextElementSibling.style.display = "block";
+      //Este método evita que el evento de clic se propague a otros elementos del DOM
+      event.stopPropagation();
+    }
+  });
+  
+  // Evitar que el clic dentro del popup cierre el popup
+  document.querySelectorAll(".options-popup").forEach(function(popup) {
+    popup.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+  });
+  
+
+  //Desplegar cantidad de stock de articulos en todas las sedes
+document.addEventListener("click", function(event) {
+    // Ocultar cualquier popup abierto
+    document.querySelectorAll(".cantidad-popup").forEach(function(popup) {
+      popup.style.display = "none";
+    });
+
+    // event.target se refiere al elemento en el que el usuario hizo clic.
+    // Mostrar el popup si se hizo click en los 3 puntos
+    if (event.target.classList.contains("flecha-abajo-cantidad")) {
+        
+    //event.target.nextElementSibling selecciona el siguiente elemento hermano (sibling) del elemento clicado,
+      event.target.nextElementSibling.style.display = "block";
+      //Este método evita que el evento de clic se propague a otros elementos del DOM
+      event.stopPropagation();
+    }
+  });
+  
+  // Evitar que el clic dentro del popup cierre el popup
+  document.querySelectorAll(".cantidad-popup").forEach(function(popup) {
+    popup.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+  });
+
 

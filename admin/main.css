@@ -68,6 +68,20 @@ a{
     margin-right: 4px;
 }
 
+.low-existence{
+    background:var(--alert-color);
+    color: var(--white);
+    padding: 0 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    column-gap: 4px;
+
+}
+
+
 .all-width{
     width: 100%;
 }
