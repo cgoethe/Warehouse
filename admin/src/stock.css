@@ -123,6 +123,10 @@
     align-items: center;
 }
 
+#section-2{
+    display: none;
+}
+
 
 /* ------------------------------- */
 .stock-table .expand-down{
