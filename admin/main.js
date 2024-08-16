@@ -7,14 +7,28 @@ const closeSidebar = document.getElementsByClassName("close")[0]
 
 
 
-userRol.addEventListener("click", () => {
-
-    if(userToolTip.style.display === "block"){
-        userToolTip.style.display = "none"
-    }else{
-        userToolTip.style.display = "block"
+// Función para manejar el cierre del tooltip
+function closeToolTip(event) {
+    if (!userToolTip.contains(event.target) && event.target !== userRol) {
+        userToolTip.style.display = "none";
+        document.removeEventListener('click', closeToolTip); // Remueve el listener después de cerrar el tooltip
     }
-})
+}
+
+// Evento para mostrar o esconder el tooltip
+userRol.addEventListener("click", (event) => {
+    event.stopPropagation(); // Evita que el clic en el botón cierre inmediatamente el tooltip
+    
+    if (userToolTip.style.display === "block") {
+        userToolTip.style.display = "none";
+        document.removeEventListener('click', closeToolTip);
+    } else {
+        userToolTip.style.display = "block";
+        document.addEventListener('click', closeToolTip);
+    }
+});
+
+
 
 //Abhrir sidebar
 hamburgerSidebar.addEventListener("click", () => {

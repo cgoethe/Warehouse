@@ -35,10 +35,13 @@
     --gray-bg: #F9F9F9;
     --gray-font: #515151;
     --gray-border: #D0D0D0;
+    --etiqueta-color: #ffecc8;
     --gray-hover: rgb(237, 237, 237);
     --theme-hover: #f2f7ff;
     --theme-color: #5584CE;
     --theme-color-dark: #40649e;
+    --alert-color: rgb(210, 92, 92);
+    --alert-color-dark: rgb(169, 71, 71);
     --white: white;
     --black: #121212;
 }
@@ -51,10 +54,22 @@ a{
 .card{
     background: var(--white);
     box-sizing: border-box;
-    padding: 12px;
+    padding: 8px 12px;
     border-radius: 16px;
     overflow-y: auto;
     
+}
+
+.etiqueta{
+    background: var(--etiqueta-color);
+    padding: 0 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.all-width{
+    width: 100%;
 }
 
 .small{
@@ -150,6 +165,39 @@ a{
     justify-content: space-between;
 }
 
+.alert-btn{
+    border-radius: 8px;
+    height: 44px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    padding: 0 24px;
+    border: none;
+    background: var(--alert-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.alert-btn:hover{
+    background: var(--alert-color-dark);
+}
+
+.create-btn{
+    border-radius: 8px;
+    height: 44px;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    padding: 0 24px;
+    border: none;
+    background: var(--theme-color);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.create-btn:hover{
+    background: var(--theme-color-dark);
+}
 
 
 .close-btn{
@@ -164,7 +212,6 @@ a{
     background: var(--white);
     color: var(--theme-color);
     cursor: pointer;
-
 }
 
 .close-btn:hover{
@@ -471,6 +518,7 @@ header .menu-icon{
     right: 24px;
     background: rgb(255, 255, 255);
     border-radius: 16px;
+    z-index: 4;
 
     > div {
         display: none;
