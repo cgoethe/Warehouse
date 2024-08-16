@@ -71,288 +71,353 @@
         </header>
 
         <section class="container container-stock">
-            <div class="stock-options card all-width">
-                <div>
-                    <h2>240 artículos de 25 referencias</h2>
+            
+            <div class="tabs">
+                <button class="tab tab-selected" id="tab-1">Stock</button>
+                <button class="tab" id="tab-2">Defectuosos</button>
+            </div>
+
+            <section class="tab-content" id="section-1">
+                <div class="stock-filters card all-width">
+                    <div class="input-busqueda">
+                        <label for="">Arículo</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">ID Artículo</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Etiquetas</label>
+                        <input type="text" >
+                        
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Sedes</label>
+                        <select class="lista-desplegable">
+                            <option value="0">Seleccionar</option>
+                            <option value="1">Todas</option>
+                            <option value="2">Sede Taiwán</option>
+                            <option value="3">Sede Norte</option>
+                            <option value="4">Sede Urbanización el Parque</option>
+                          </select>  
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Proveedores</label>
+                        <select class="lista-desplegable">
+                            <option value="0">Seleccionar</option>
+                            <option value="1">Todas</option>
+                            <option value="2">Fábrica Cali</option>
+                            <option value="3">Fábrica Medellín</option>
+                            <option value="4">Fábrica B/quilla</option>
+                          </select>  
+                    </div>
                 </div>
-                <button class="alert-btn">Artículo defectuoso</button>
-                <button class="create-btn">Agregar artículo</button>
-            </div>
+                <div class="stock-options card all-width">
+                    <div>
+                        <h2>240 artículos de 25 referencias</h2>
+                    </div>
+                    <!-- <button class="alert-btn">Artículo defectuoso</button> -->
+                    <button class="create-btn">Agregar artículo</button>
+                </div>
+    
+    
+                <div class="stock-table card all-width">
+                    <table class="stock-table">
+                        <thead>
+                            <tr>
+                                <th>Artículo</th>
+                                <th>Talla</th>
+                                <th>ID</th>
+                                <th>Tipo</th>
+                                <th>Etiquetas</th>
+                                <th>Cantidad Stock</th>
+                                <th>Precio Unitario</th>
+                                <th>Proveedor</th>
+                                <th></th>
+    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/adidas-f50.png" alt="Zapatos Running" class="product-image">
+                                    Zapatillas Adidas F50
+                                </td>
+                                <td>41</td>
+                                <td>ZAF50-41FC</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
+                                <td>50</td>
+                                <td>$35.000</td>
+                                <td>Fábrica Cali</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/adidas-f50.png" alt="Zapatos Running" class="product-image">
+                                    Zapatillas Adidas F50
+                                </td>
+                                <td>41</td>
+                                <td>ZAF50-41FM</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
+                                <td>50</td>
+                                <td>$35.000</td>
+                                <td>Fábrica Medellín</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/adidas-superstar.jpg" alt="Camiseta Básica" class="product-image">
+                                    Adidas Super Star Negro
+                                </td>
+                                <td>38</td>
+                                <td>ASSNEG-38FM</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Casual</span><span class="etiqueta">Hombre</span></td>
+                                <td class="cantidad-stock">
+                                    <span>200</span>
+                                    <div class="options-wrapper">
+                                        <span class="material-symbols-outlined flecha-abajo-cantidad">expand_circle_down</span>
+                                        <div class="cantidad-popup">
+                                            <table class="card shadow all-width">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sede Taiwán</td>
+                                                        <td>200</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sede Norte</td>
+                                                        <td>40</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total</td>
+                                                        <td>240</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>$40.000</td>
+                                <td>Fábrica Medellín</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/adidas-gorra.jpg" alt="Gorra Casual" class="product-image">
+                                    Gorra Adidas
+                                </td>
+                                <td>M</td>
+                                <td>GADI-MFC</td>
+                                <td>Accesorios</td>
+                                <td><span class="etiqueta">Gorras</span><span class="etiqueta">Unisex</span></td>
+                                <td class="cantidad-stock">
+                                    <span class="low-existence">3</span>
+                                    <div class="options-wrapper">
+                                        <span class="material-symbols-outlined flecha-abajo-cantidad">expand_circle_down</span>
+                                        <div class="cantidad-popup">
+                                            <table class="card shadow all-width">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Sede Taiwán</td>
+                                                        <td><span class="low-existence">3</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sede Norte</td>
+                                                        <td>100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total</td>
+                                                        <td>103</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>$12.000</td>
+                                <td>Fábrica Cali</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/nike-air-froce-one2.jpg" alt="Reloj Inteligente" class="product-image">
+                                    Nike Air Force One Verde
+                                </td>
+                                <td>41</td>
+                                <td>NAFOVER-40FB</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Casual</span></td>
+                                <td>30</td>
+                                <td>$40.000</td>
+                                <td>Fábrica B/quilla</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/nike-mercurial.jpg" alt="Sudadera con Capucha" class="product-image">
+                                    Nike Mercurial Fucsia
+                                </td>
+                                <td>40</td>
+                                <td>NMFUC-40FC</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
+                                <td>60</td>
+                                <td>$60.000</td>
+                                <td>Fábrica Cali</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>                        <tr>
+                                <td class="product-name">
+                                    <img src="../src/img/nike-mercurial.jpg" alt="Sudadera con Capucha" class="product-image">
+                                    Nike Mercurial Fucsia
+                                </td>
+                                <td>36</td>
+                                <td>NMFUC-36FC</td>
+                                <td>Calzado</td>
+                                <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
+                                <td>60</td>
+                                <td>$60.000</td>
+                                <td>Fábrica Cali</td>
+                                <td class="options">
+                                    <div class="options-wrapper">
+                                        <div class="dots">⋮</div>
+                                        <div class="options-popup shadow">
+                                          <ul>
+                                            <li class="edit-article">Editar</li>
+                                            <li class="delete-article">Deshabilitar</li>
+                                            <li class="article-details">Ver detalles</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </section>
 
-            <div class="stock-filters card all-width">
-                Filtros de búsqueda
-            </div>
+            <section class="tab-content" id="section-2">
+                <div class="stock-filters card all-width">
+                    <div class="input-busqueda">
+                        <label for="">Arículo</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">ID Artículo</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Etiquetas</label>
+                        <input type="text" >
+                        
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Sedes</label>
+                        <select class="lista-desplegable">
+                            <option value="0">Seleccionar</option>
+                            <option value="1">Todas</option>
+                            <option value="2">Sede Taiwán</option>
+                            <option value="3">Sede Norte</option>
+                            <option value="4">Sede Urbanización el Parque</option>
+                          </select>  
+                    </div>
+                    <div class="input-busqueda">
+                        <label for="">Proveedores</label>
+                        <select class="lista-desplegable">
+                            <option value="0">Seleccionar</option>
+                            <option value="1">Todas</option>
+                            <option value="2">Fábrica Cali</option>
+                            <option value="3">Fábrica Medellín</option>
+                            <option value="4">Fábrica B/quilla</option>
+                          </select>  
+                    </div>
+                </div>
+                <div class="stock-options card all-width">
+                    <div>
+                        <h2>240 artículos de 25 referencias</h2>
+                    </div>
+                    <!-- <button class="alert-btn">Artículo defectuoso</button> -->
+                    <button class="create-btn">Agregar artículo</button>
+                </div>
+    
+    
+                <div class="stock-table card all-width">
 
-            <div class="stock-table card all-width">
-                <table class="stock-table">
-                    <thead>
-                        <tr>
-                            
-                            <th>Nombre Producto</th>
-                            <th>Talla</th>
-                            <th>ID</th>
-                            <th>Tipo</th>
-                            <th>Etiquetas</th>
-                            <th>Cantidad Stock</th>
-                            <th>Precio Unitario</th>
-                            <th>Proveedor</th>
-                            <th></th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/adidas-f50.png" alt="Zapatos Running" class="product-image">
-                                Zapatillas Adidas F50
-                            </td>
-                            <td>41</td>
-                            <td>ZAF50-41FC</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
-                            <td>50</td>
-                            <td>$35.000</td>
-                            <td>Fábrica Cali</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/adidas-f50.png" alt="Zapatos Running" class="product-image">
-                                Zapatillas Adidas F50
-                            </td>
-                            <td>41</td>
-                            <td>ZAF50-41FM</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
-                            <td>50</td>
-                            <td>$35.000</td>
-                            <td>Fábrica Medellín</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/adidas-superstar.jpg" alt="Camiseta Básica" class="product-image">
-                                Adidas Super Star Negro
-                            </td>
-                            <td>38</td>
-                            <td>ASSNEG-38FM</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Casual</span><span class="etiqueta">Hombre</span></td>
-                            <td class="cantidad-stock">
-                                <span>200</span>
-                                <div class="options-wrapper">
-                                    <span class="material-symbols-outlined flecha-abajo-cantidad">expand_circle_down</span>
-                                    <div class="cantidad-popup">
-                                        <table class="card shadow all-width">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Sede Taiwán</td>
-                                                    <td>200</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sede Norte</td>
-                                                    <td>40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Total</td>
-                                                    <td>240</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>$40.000</td>
-                            <td>Fábrica Medellín</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/nike-air-force-one.jpg" alt="Mochila Deportiva" class="product-image">
-                                Nike Air Force One Café
-                            </td>
-                            <td>40</td>
-                            <td>NAFOCAF-40FM</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Casual</span><span class="etiqueta">Hombre</span></td>
-                            <td>80</td>
-                            <td>$40.000</td>
-                            <td>Fábrica Medellín</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/adidas-gorra.jpg" alt="Gorra Casual" class="product-image">
-                                Gorra Adidas
-                            </td>
-                            <td>M</td>
-                            <td>GADI-MFC</td>
-                            <td>Accesorios</td>
-                            <td><span class="etiqueta">Gorras</span><span class="etiqueta">Unisex</span></td>
-                            <td class="cantidad-stock">
-                                <span class="low-existence">3</span>
-                                <div class="options-wrapper">
-                                    <span class="material-symbols-outlined flecha-abajo-cantidad">expand_circle_down</span>
-                                    <div class="cantidad-popup">
-                                        <table class="card shadow all-width">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Sede Taiwán</td>
-                                                    <td><span class="low-existence">3</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sede Norte</td>
-                                                    <td>100</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Total</td>
-                                                    <td>103</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>$12.000</td>
-                            <td>Fábrica Cali</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/nike-air-froce-one2.jpg" alt="Reloj Inteligente" class="product-image">
-                                Nike Air Force One Verde
-                            </td>
-                            <td>41</td>
-                            <td>NAFOVER-40FB</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Casual</span></td>
-                            <td>30</td>
-                            <td>$40.000</td>
-                            <td>Fábrica B/quilla</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/nike-mercurial.jpg" alt="Sudadera con Capucha" class="product-image">
-                                Nike Mercurial Fucsia
-                            </td>
-                            <td>40</td>
-                            <td>NMFUC-40FC</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
-                            <td>60</td>
-                            <td>$60.000</td>
-                            <td>Fábrica Cali</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>                        <tr>
-                            <td class="product-name">
-                                <img src="../src/img/nike-mercurial.jpg" alt="Sudadera con Capucha" class="product-image">
-                                Nike Mercurial Fucsia
-                            </td>
-                            <td>36</td>
-                            <td>NMFUC-36FC</td>
-                            <td>Calzado</td>
-                            <td><span class="etiqueta">Deportivo</span><span class="etiqueta">Hombre</span></td>
-                            <td>60</td>
-                            <td>$60.000</td>
-                            <td>Fábrica Cali</td>
-                            <td class="options">
-                                <div class="options-wrapper">
-                                    <div class="dots">⋮</div>
-                                    <div class="options-popup shadow">
-                                      <ul>
-                                        <li class="edit-article">Editar</li>
-                                        <li class="delete-article">Deshabilitar</li>
-                                        <li class="article-details">Ver detalles</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
+                </div>
+    
+            </section>
             
         </section>
+
 
         <footer>
             <p>Copyright  © 2024 Goethe Dev. All Rights Reserved</p>
@@ -429,5 +494,6 @@
      </div>
 
     <script src="./main.js"></script>
+    <script src="./src/resumen.js"></script>
 </body>
 </html>

@@ -12,11 +12,69 @@
     --black: #121212;
 }
 
+/* *-------------------- */
+
+.tabs{
+    display: flex;
+    gap: 0;
+    margin: 24px 0;
+    border-bottom: 1px solid var(--gray-hover);
+
+}
+
+.tab{
+    background: var(--gray-bg);
+    border: none;
+    font-size: 16px;
+    display: inline-flex;
+    padding: 8px 20px;
+    margin: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+.tab-selected{
+    background: var(--white);
+    border-bottom: 4px solid var(--theme-color);
+    color: var(--theme-color);
+}
+
+.tab:hover{
+    background: var(--gray-hover);
+    cursor: pointer;
+}
+
+
+.stock-filters{
+
+    display: grid;
+    align-items: center;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    box-sizing: border-box;
+
+}
+
+.input-busqueda{
+    display: grid;
+    grid-template-rows: auto 40px;
+}
+
+
+
+
 
 .container-stock{
-    display: grid;
-    place-items: center;    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto 1fr;
     align-items: start;
+    padding: 0;
+}
+
+.tab-content{
+    display: grid;
+    width: 100%;
     gap: 12px;
 }
 
@@ -40,11 +98,6 @@
     padding: 8px;
     text-align: left;
 }
-
-
-
-
-
 
 
 .stock-table thead tr:first-child{

@@ -50,6 +50,25 @@ a{
     cursor: pointer;
 }
 
+label{
+    font-size: 14px;
+    color: var(--gray-font);
+}
+
+input{
+    outline: none;
+    border: 1px solid var(--gray-hover);
+    color: var(--gray-font);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0 8px;
+    font-size: 16px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid var(--gray-border);
+}
 /* ------------------------------------------ */
 .card{
     background: var(--white);
@@ -66,6 +85,11 @@ a{
     border-radius: 8px;
     cursor: pointer;
     margin-right: 4px;
+}
+
+.etiqueta-close:after{
+    content: " x";
+    font-weight: bold;
 }
 
 .low-existence{
@@ -102,14 +126,15 @@ a{
 
 .lista-desplegable{
     width: 100%;
-    padding: 10px;
+    padding: 4px;
     border: 1px solid var(--gray-hover);
     outline: none;
     border-radius: 8px;
     background-color: #fff;
-    color: var(--black);
+    color: var(--gray-font);
     font-size: 16px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .lista-desplegable:focus{
@@ -566,7 +591,7 @@ header .menu-icon{
 .mainContent .container{
     display: grid;
     box-sizing: border-box;
-    padding: 24px;
+    padding: 0 24px;
     top: 72px;
     position: relative;
     min-height: calc(100% - 72px*2);
