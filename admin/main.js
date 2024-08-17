@@ -108,6 +108,11 @@ editUserBtn.addEventListener("click",() => {
 })
 
 
+
+//Modal de editar articulos de inventario
+
+
+
 //Desplegar lista de opciones en celda
 document.addEventListener("click", function(event) {
     // Ocultar cualquier popup abierto

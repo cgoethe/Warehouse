@@ -25,4 +25,35 @@ document.getElementById("tab-1").addEventListener("click", function() {
     // Agregar la clase 'active' al botón seleccionado
     document.getElementById(tabId).classList.add("tab-selected");
   }
+
+
+
+
+const editArticulo = document.querySelectorAll(".edit-article");
+editArticulo.forEach((button) => {
+    button.addEventListener("click", () => {
+        let popupNode = document.querySelector("#popup-edit-article");
+        let overlay = popupNode.querySelector(".overlay");
+        let closeBtn = popupNode.querySelector(".close-btn");
+        let submitBtn = popupNode.querySelector(".submit-btn");
+    
+        function openPopup(){
+            popupNode.classList.add("active")
+        }
+    
+        
+        function closePopup(){
+            popupNode.classList.remove("active")
+        }
+    
+        //Events to close popup when it's opened
+        overlay.addEventListener("click", closePopup);
+        closeBtn.addEventListener("click", closePopup);
+        submitBtn.addEventListener("click", closePopup);
+    
+        return openPopup();
+    })
+})
+
+
   
